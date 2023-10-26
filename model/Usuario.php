@@ -11,7 +11,7 @@ class Usuario extends Conectar
             $contra_usuario = $_POST["contra_usuario"];
 
             if (empty($correo_usuario) or empty($contra_usuario)) {
-                header("Location" . Conectar::ruta() . "index.php?m=2");
+                header("Location:" . Conectar::ruta() . "index.php?m=2");
                 exit();
             } else {
                 $sql = 'SELECT * FROM `usuario` WHERE usuario.correo_usuario = ? AND usuario.contra_usuario = ? AND usuario.estado_usuario = 1;';

@@ -8,7 +8,7 @@ class Conectar
     protected function Conexion()
     {
         try {
-            $conectar = $this->dbh = new PDO("mysql: local = localhost; dbname = mvc_php", "root", "");
+            $conectar = $this->dbh = new PDO("mysql:host=localhost;dbname=mvc_php", "root", "");
             return $conectar;
         } catch (Exception $e) {
             print("¡Error en la base de datos!:" . $e->getMessage() . "</br>");
@@ -23,6 +23,6 @@ class Conectar
 
     public function ruta()
     {
-        return "http://localhost/mvc_php";
+        return "http://localhost/mvc_php/";
     }
 }
